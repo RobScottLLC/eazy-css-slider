@@ -18,6 +18,8 @@ Requires at least: 4.2.4
 Tested up to: 4.5 
 
 ##Changelog
+= 1.1.0 =
+Change plugin function name to be more verbose to reduct potential conflicts
 = 1.0 =  
 First version
 

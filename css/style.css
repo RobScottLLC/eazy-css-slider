@@ -1,4 +1,4 @@
-.slider {
+.eazy-css-slider {
   position: relative;
   left:   0;
   right:  0;
@@ -11,11 +11,11 @@
   -webkit-touch-callout: none;
   user-select:  none; 
 }
-.slider input {
+.eazy-css-slider input {
   display: none;
 }
 
-.slide {
+.eazy-css-slide {
   left:   0;
   right:  0;
   top:    0;
@@ -32,7 +32,7 @@
   -o-transition:  all .5s linear;
           transition: all .5s linear;
 }
-.slide img {
+.eazy-css-slide img {
   width: 100%;
   height: 100%;
 }
@@ -50,7 +50,7 @@
   position: relative;
 }
 
-.slide .nav label {
+.eazy-css-slide .nav label {
   display: none;
   position: absolute;
   opacity: 0;
@@ -67,24 +67,24 @@
   text-shadow: 0 0 15px #777777;
 }
 
-.slide:hover + .slide .nav label {
+.eazy-css-slide:hover + .eazy-css-slide .nav label {
   opacity: 0.5;
 }
 
-.slide .nav label:hover {
+.eazy-css-slide .nav label:hover {
   opacity: 1;
 }
 
-.slide .nav .prev {
+.eazy-css-slide .nav .prev {
   left: 0;
   top: 0;
 }
-.slide .nav .next {
+.eazy-css-slide .nav .next {
   right: 0;
   top: 0;
 }
 
-input:checked + .slide {
+input:checked + .eazy-css-slide {
   opacity: 1;
 
   /*
@@ -105,7 +105,7 @@ input:checked + .slide {
           transition: opacity 1s ease-in-out;
 }
 
-input:checked + .slide .nav label {
+input:checked + .eazy-css-slide .nav label {
   display: block;
   height: 100%;
 }

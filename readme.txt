@@ -2,7 +2,7 @@
 Contributors: r0bsc0tt
 Tags: CSS Slider, Image Slider, Slider, Gallery, Image Carousel
 Requires at least: 4.2
-Tested up to: 4.5
+Tested up to: 4.4
 Stable tag: trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -30,6 +30,8 @@ You add slides like a post and add sliders using the shortcode [eazy-css-slider]
 4. Slides stay organized like posts and pages do. 
 
 == Changelog ==
+= 1.1.0 =
+* Update function names to reduce potential conflicts
 = 1.0.0 =
 * Initial Release.
 

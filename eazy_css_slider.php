@@ -3,7 +3,7 @@
 Plugin Name: Eazy CSS Slider
 Plugin URI: http://robjscott.com/wordpress/
 Description:  Adds slide custom post type for uploading slides. Slides can be added to slider using shortcodes. 
-Version: 1.0.0
+Version: 1.1.0
 Author: Rob Scott, LLC
 Author URI: http://robjscott.com
 License: GPLv2
@@ -14,25 +14,25 @@ Copyright: Rob Scott, LLC
 function eazy_css_slides() {
 
 	$labels = array(
-		'name'                => _x( 'Eazy CSS Slides', 'Post Type General Name', 'text_domain' ),
-		'singular_name'       => _x( 'Eazy CSS Slide', 'Post Type Singular Name', 'text_domain' ),
-		'menu_name'           => __( 'Eazy CSS Slider', 'text_domain' ),
-		'name_admin_bar'      => __( 'Eazy CSS Slide', 'text_domain' ),
-		'parent_item_colon'   => __( 'Parent Item:', 'text_domain' ),
-		'all_items'           => __( 'All Slides', 'text_domain' ),
-		'add_new_item'        => __( 'Add New Slide', 'text_domain' ),
-		'add_new'             => __( 'Add New Slide', 'text_domain' ),
-		'new_item'            => __( 'New Slide', 'text_domain' ),
-		'edit_item'           => __( 'Edit Slide', 'text_domain' ),
-		'update_item'         => __( 'Update Slide', 'text_domain' ),
-		'view_item'           => __( 'View Slide', 'text_domain' ),
-		'search_items'        => __( 'Search Slides', 'text_domain' ),
-		'not_found'           => __( 'Slide Not found', 'text_domain' ),
-		'not_found_in_trash'  => __( 'Slide Not found in Trash', 'text_domain' ),
+		'name'                => _x( 'Eazy CSS Slides', 'Post Type General Name', 'eazy_css_slider' ),
+		'singular_name'       => _x( 'Eazy CSS Slide', 'Post Type Singular Name', 'eazy_css_slider' ),
+		'menu_name'           => __( 'Eazy CSS Slider', 'eazy_css_slider' ),
+		'name_admin_bar'      => __( 'Eazy CSS Slide', 'eazy_css_slider' ),
+		'parent_item_colon'   => __( 'Parent Item:', 'eazy_css_slider' ),
+		'all_items'           => __( 'All Slides', 'eazy_css_slider' ),
+		'add_new_item'        => __( 'Add New Slide', 'eazy_css_slider' ),
+		'add_new'             => __( 'Add New Slide', 'eazy_css_slider' ),
+		'new_item'            => __( 'New Slide', 'eazy_css_slider' ),
+		'edit_item'           => __( 'Edit Slide', 'eazy_css_slider' ),
+		'update_item'         => __( 'Update Slide', 'eazy_css_slider' ),
+		'view_item'           => __( 'View Slide', 'eazy_css_slider' ),
+		'search_items'        => __( 'Search Slides', 'eazy_css_slider' ),
+		'not_found'           => __( 'Slide Not found', 'eazy_css_slider' ),
+		'not_found_in_trash'  => __( 'Slide Not found in Trash', 'eazy_css_slider' ),
 	);
 	$args = array(
-		'label'               => __( 'eazy_slide', 'text_domain' ),
-		'description'         => __( 'Eazy CSS Slide', 'text_domain' ),
+		'label'               => __( 'eazy_css_slide', 'eazy_css_slider' ),
+		'description'         => __( 'Eazy CSS Slide', 'eazy_css_slider' ),
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'thumbnail', 'editor' ),
 		'hierarchical'        => false,
@@ -51,7 +51,7 @@ function eazy_css_slides() {
 		'capability_type'     => 'post',
 	);
 
-	register_post_type( 'eazy_slide', $args );
+	register_post_type( 'eazy_css_slide', $args );
 
 }
 // Hook into the 'init' action
@@ -62,23 +62,23 @@ add_action( 'init', 'eazy_css_slides', 0 );
 // Register Custom Taxonomy
 function eazy_css_slider() {
 	$labels = array(
-		'name'                       => _x( 'Eazy CSS Sliders', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'Slider', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'Sliders', 'text_domain' ),
-		'all_items'                  => __( 'All Sliders', 'text_domain' ),
-		'parent_item'                => __( 'Parent Slider', 'text_domain' ),
-		'parent_item_colon'          => __( 'Parent Slider:', 'text_domain' ),
-		'new_item_name'              => __( 'New Slider Name', 'text_domain' ),
-		'add_new_item'               => __( 'Add New Slider', 'text_domain' ),
-		'edit_item'                  => __( 'Edit Slider', 'text_domain' ),
-		'update_item'                => __( 'Update Slider', 'text_domain' ),
-		'view_item'                  => __( 'View Slider', 'text_domain' ),
-		'separate_items_with_commas' => __( 'Separate items with commas', 'text_domain' ),
-		'add_or_remove_items'        => __( 'Add or remove sliders', 'text_domain' ),
-		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+		'name'                       => _x( 'Eazy CSS Sliders', 'Taxonomy General Name', 'eazy_css_slider' ),
+		'singular_name'              => _x( 'Slider', 'Taxonomy Singular Name', 'eazy_css_slider' ),
+		'menu_name'                  => __( 'Sliders', 'eazy_css_slider' ),
+		'all_items'                  => __( 'All Sliders', 'eazy_css_slider' ),
+		'parent_item'                => __( 'Parent Slider', 'eazy_css_slider' ),
+		'parent_item_colon'          => __( 'Parent Slider:', 'eazy_css_slider' ),
+		'new_item_name'              => __( 'New Slider Name', 'eazy_css_slider' ),
+		'add_new_item'               => __( 'Add New Slider', 'eazy_css_slider' ),
+		'edit_item'                  => __( 'Edit Slider', 'eazy_css_slider' ),
+		'update_item'                => __( 'Update Slider', 'eazy_css_slider' ),
+		'view_item'                  => __( 'View Slider', 'eazy_css_slider' ),
+		'separate_items_with_commas' => __( 'Separate items with commas', 'eazy_css_slider' ),
+		'add_or_remove_items'        => __( 'Add or remove sliders', 'eazy_css_slider' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'eazy_css_slider' ),
 
-		'search_items'               => __( 'Search Sliders', 'text_domain' ),
-		'not_found'                  => __( 'Not Found', 'text_domain' ),
+		'search_items'               => __( 'Search Sliders', 'eazy_css_slider' ),
+		'not_found'                  => __( 'Not Found', 'eazy_css_slider' ),
 	);
 	$args = array(
 		'labels'                     => $labels,
@@ -89,33 +89,33 @@ function eazy_css_slider() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => false,
 	);
-	register_taxonomy( 'slider', array( 'eazy_slide' ), $args );
+	register_taxonomy( 'eazy_css_slider', array( 'eazy_css_slide' ), $args );
 }
 // Hook into the 'init' action
 add_action( 'init', 'eazy_css_slider', 0 );
 
 
 // change default text in title 
-function custom_enter_title( $input ) {
+function custom_eazy_css_title( $input ) {
     global $post_type;
-    if( is_admin() && 'Enter title here' == $input && 'eazy_slide' == $post_type )
+    if( is_admin() && 'Enter title here' == $input && 'eazy_css_slide' == $post_type )
         return 'Enter Slide Title';
     return $input;
 }
-add_filter('gettext','custom_enter_title');
+add_filter('gettext','custom_eazy_css_title');
 
 
 // remove featured image metabox & add Eazy CSS Slide Image
-function eazy_slider_image_box() {
-	remove_meta_box( 'postimagediv', 'eazy_slide', 'side' );
-	add_meta_box('postimagediv', __('Add Eazy CSS Slide Image'), 'post_thumbnail_meta_box', 'eazy_slide', 'side', 'default');
+function eazy_css_slider_image_box() {
+	remove_meta_box( 'postimagediv', 'eazy_css_slide', 'side' );
+	add_meta_box('postimagediv', __('Add Eazy CSS Slide Image'), 'post_thumbnail_meta_box', 'eazy_css_slide', 'side', 'default');
 }
-add_action('do_meta_boxes', 'eazy_slider_image_box');
+add_action('do_meta_boxes', 'eazy_css_slider_image_box');
 
 
 
 // change size of admin featured image size in edit screen 
-function eazy_slider_image_size( $downsize, $id, $size ) {
+function eazy_css_slider_image_size( $downsize, $id, $size ) {
 if ( ! is_admin() || ! get_current_screen() || 'edit' !== get_current_screen()->parent_base ) {
     return $downsize;
 }
@@ -126,7 +126,7 @@ $image = image_downsize( $id, 'medium' );
 add_filter( 'image_downsize', __FUNCTION__, 10, 3 );
 return $image;
 }
-add_filter( 'image_downsize', 'eazy_slider_image_size', 10, 3 );
+add_filter( 'image_downsize', 'eazy_css_slider_image_size', 10, 3 );
 
 
 //Add Shortcode
@@ -134,8 +134,8 @@ include( 'eazy_css_slider_shortcode.php') ;
 
 
 //Add CSS
-function eazy_css() {
+function eazy_css_slider_style() {
 	wp_enqueue_style( 'eazy-css-slider',  plugins_url( 'css/style.css', __FILE__ ) );
 }
 
-add_action( 'wp_enqueue_scripts', 'eazy_css' );
+add_action( 'wp_enqueue_scripts', 'eazy_css_slider_style' );
